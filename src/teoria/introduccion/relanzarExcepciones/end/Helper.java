@@ -8,10 +8,21 @@ import java.util.Scanner;
 
 public class Helper {
     public static Map<String, Peson> getPeople(String path) throws FileNotFoundException {
-        Map<String, Peson> people = new HashMap<>();
+        Map<String, Peson> people = new HashMap<>();  //diccinario vacío
         //abrimos scanner
         Scanner sc = new Scanner(new File(path));
-        //código
+        //código:  ngoldbourn2c@howstuffworks.com -> new Person(Nikaniki,Goldbourn)
+        String head =  sc.nextLine();   //obviamos la cabecera
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            //Nikaniki,Goldbourn,ngoldbourn2c@howstuffworks.com  hay que trocearlo
+            String[] tokens = line.split(",");
+            String firstName = tokens[0];
+            String lastaName = tokens[1];
+            String email     = tokens[2];
+            Peson peson = new Peson(firstName, lastaName);
+            people.put(email, peson);
+        }
         sc.close();
         return people;
     }
