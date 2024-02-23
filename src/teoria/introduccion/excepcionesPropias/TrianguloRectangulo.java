@@ -1,5 +1,5 @@
 package teoria.introduccion.excepcionesPropias;
-
+//excepciones propias
 import java.io.IOException;
 
 public final class TrianguloRectangulo {

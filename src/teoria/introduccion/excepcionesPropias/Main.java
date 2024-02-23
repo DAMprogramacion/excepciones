@@ -1,4 +1,5 @@
 package teoria.introduccion.excepcionesPropias;
+//excepciones propias
 
 public class Main {
     public static void main(String[] args) {
