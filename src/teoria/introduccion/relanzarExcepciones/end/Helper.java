@@ -7,8 +7,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Helper {
-    public static Map<String, Peson> getPeople(String path) throws FileNotFoundException {
-        Map<String, Peson> people = new HashMap<>();  //diccinario vacío
+    public static Map<String, Person> getPeople(String path) throws FileNotFoundException {
+        Map<String, Person> people = new HashMap<>();  //diccinario vacío
         //abrimos scanner
         Scanner sc = new Scanner(new File(path));
         //código:  ngoldbourn2c@howstuffworks.com -> new Person(Nikaniki,Goldbourn)
@@ -20,8 +20,8 @@ public class Helper {
             String firstName = tokens[0];
             String lastaName = tokens[1];
             String email     = tokens[2];
-            Peson peson = new Peson(firstName, lastaName);
-            people.put(email, peson);
+            Person person = new Person(firstName, lastaName);
+            people.put(email, person);
         }
         sc.close();
         return people;
