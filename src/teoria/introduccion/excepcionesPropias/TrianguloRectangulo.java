@@ -1,8 +1,9 @@
 package teoria.introduccion.excepcionesPropias;
 //excepciones propias
+import java.io.Closeable;
 import java.io.IOException;
 
-public final class TrianguloRectangulo {
+public final class TrianguloRectangulo  {
     private final double cateto1;
     private  final double cateto2;
     private  final double hipotenusa;   //nos obligan a trabajar con este atributo
@@ -42,9 +43,6 @@ public final class TrianguloRectangulo {
     private static boolean esTrianguloRectangulo(double cateto1, double cateto2, double hipotenusa) {
         return Math.hypot(cateto1, cateto2) == hipotenusa;
     }
-
-
-
 
 
 
